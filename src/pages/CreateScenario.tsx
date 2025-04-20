@@ -66,11 +66,11 @@ const CreateScenario = () => {
           Назад
         </Button>
 
-        <div className="bg-[#231327] rounded-xl shadow-lg shadow-[#ff5cad]/20 p-6 border border-[#ff5cad]/30">
-          <h1 className="text-2xl font-bold text-[#ff5cad] mb-6">Создание нового сценария</h1>
+        <div className="bg-[#231327] rounded-xl p-6 border border-[#ff5cad]/30 neon-box">
+          <h1 className="text-2xl font-bold text-[#ff5cad] mb-6 neon-text">Создание нового сценария</h1>
           
           {error && (
-            <div className="bg-[#3a0f1e] p-3 rounded mb-4 text-[#ff5cad] border border-[#ff5cad]/50">
+            <div className="bg-[#3a0f1e] p-3 rounded mb-4 text-[#ff5cad] border border-[#ff5cad]/50 neon-border">
               {error}
             </div>
           )}
@@ -84,7 +84,7 @@ const CreateScenario = () => {
                 value={codeword}
                 onChange={(e) => setCodeword(e.target.value)}
                 placeholder="Введите секретное шифр-слово"
-                className="border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30]"
+                className="border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30] neon-input"
               />
             </div>
 
@@ -96,13 +96,13 @@ const CreateScenario = () => {
                 value={result}
                 onChange={(e) => setResult(e.target.value)}
                 placeholder="Что должно отобразиться при вводе шифр-слова"
-                className="min-h-[120px] border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30]"
+                className="min-h-[120px] border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30] neon-input"
               />
             </div>
 
             <Button 
               onClick={saveScenario} 
-              className="w-full bg-[#ff5cad] hover:bg-[#ff3896] text-black font-semibold"
+              className="w-full bg-[#ff5cad] hover:bg-[#ff3896] text-black font-semibold neon-button"
             >
               <Save className="mr-2" />
               Сохранить сценарий

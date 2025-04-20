@@ -42,7 +42,7 @@ const Index = () => {
       {/* Кнопка создания сценария сверху */}
       <div className="w-full flex justify-end p-4">
         <Link to="/create">
-          <Button className="bg-[#ff5cad] hover:bg-[#ff3896] text-black font-semibold">
+          <Button className="bg-[#ff5cad] hover:bg-[#ff3896] text-black font-semibold neon-button">
             <PlusCircle className="mr-2" />
             Создать новый сценарий
           </Button>
@@ -52,22 +52,22 @@ const Index = () => {
       {/* Центральное содержимое */}
       <div className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-lg text-center mb-8">
-          <h1 className="text-4xl font-bold text-[#ff5cad] mb-4">Шифр-слова</h1>
+          <h1 className="text-4xl font-bold text-[#ff5cad] mb-4 neon-text flicker">Шифр-слова</h1>
           <p className="text-[#d1a6bb] text-lg">Введите шифр-слово для проверки</p>
         </div>
 
-        <div className="bg-[#231327] rounded-xl shadow-lg shadow-[#ff5cad]/20 p-8 w-full max-w-lg border border-[#ff5cad]/30">
+        <div className="bg-[#231327] rounded-xl p-8 w-full max-w-lg border border-[#ff5cad]/30 neon-box">
           <div className="flex gap-2 mb-6">
             <Input
               placeholder="ВВЕДИТЕ ШИФР-СЛОВО"
               value={codeword}
               onChange={(e) => setCodeword(e.target.value)}
-              className="border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30] text-xl h-14 uppercase placeholder:uppercase text-[#ff5cad]"
+              className="border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30] text-xl h-14 uppercase placeholder:uppercase text-[#ff5cad] neon-input"
               onKeyDown={(e) => e.key === 'Enter' && handleCodewordCheck()}
             />
             <Button 
               onClick={handleCodewordCheck}
-              className="bg-[#ff5cad] hover:bg-[#ff3896] h-14 w-14 text-black"
+              className="bg-[#ff5cad] hover:bg-[#ff3896] h-14 w-14 text-black neon-button"
               size="icon"
             >
               <Search size={24} />
@@ -75,7 +75,7 @@ const Index = () => {
           </div>
 
           {result && (
-            <div className="bg-[#2c1a30] p-6 rounded-lg border border-[#ff5cad]/50 animate-fade-in">
+            <div className="bg-[#2c1a30] p-6 rounded-lg border border-[#ff5cad]/50 animate-fade-in neon-border">
               <p className="font-medium text-lg text-white">{result}</p>
             </div>
           )}
