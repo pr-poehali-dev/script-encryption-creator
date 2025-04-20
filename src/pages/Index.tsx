@@ -38,11 +38,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#f6f6f7] to-[#e5deff]">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#1a0d1c] to-[#0f0710] dark text-white">
       {/* Кнопка создания сценария сверху */}
       <div className="w-full flex justify-end p-4">
         <Link to="/create">
-          <Button className="bg-[#9b87f5] hover:bg-[#7E69AB]">
+          <Button className="bg-[#ff5cad] hover:bg-[#ff3896] text-black font-semibold">
             <PlusCircle className="mr-2" />
             Создать новый сценарий
           </Button>
@@ -52,22 +52,22 @@ const Index = () => {
       {/* Центральное содержимое */}
       <div className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-lg text-center mb-8">
-          <h1 className="text-4xl font-bold text-[#1A1F2C] mb-4">Шифр-слова</h1>
-          <p className="text-[#8E9196] text-lg">Введите шифр-слово для проверки</p>
+          <h1 className="text-4xl font-bold text-[#ff5cad] mb-4">Шифр-слова</h1>
+          <p className="text-[#d1a6bb] text-lg">Введите шифр-слово для проверки</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-lg">
+        <div className="bg-[#231327] rounded-xl shadow-lg shadow-[#ff5cad]/20 p-8 w-full max-w-lg border border-[#ff5cad]/30">
           <div className="flex gap-2 mb-6">
             <Input
               placeholder="ВВЕДИТЕ ШИФР-СЛОВО"
               value={codeword}
               onChange={(e) => setCodeword(e.target.value)}
-              className="border-[#D6BCFA] focus-visible:ring-[#9b87f5] text-xl h-14 uppercase placeholder:uppercase"
+              className="border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30] text-xl h-14 uppercase placeholder:uppercase text-[#ff5cad]"
               onKeyDown={(e) => e.key === 'Enter' && handleCodewordCheck()}
             />
             <Button 
               onClick={handleCodewordCheck}
-              className="bg-[#9b87f5] hover:bg-[#7E69AB] h-14 w-14"
+              className="bg-[#ff5cad] hover:bg-[#ff3896] h-14 w-14 text-black"
               size="icon"
             >
               <Search size={24} />
@@ -75,8 +75,8 @@ const Index = () => {
           </div>
 
           {result && (
-            <div className="bg-[#F2FCE2] p-6 rounded-lg border border-[#D6BCFA] animate-fade-in">
-              <p className="font-medium text-lg">{result}</p>
+            <div className="bg-[#2c1a30] p-6 rounded-lg border border-[#ff5cad]/50 animate-fade-in">
+              <p className="font-medium text-lg text-white">{result}</p>
             </div>
           )}
         </div>

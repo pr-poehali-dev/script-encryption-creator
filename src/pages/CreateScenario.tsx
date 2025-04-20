@@ -55,56 +55,56 @@ const CreateScenario = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#f6f6f7] to-[#e5deff] p-6">
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#1a0d1c] to-[#0f0710] p-6 text-white">
       <div className="w-full max-w-md">
         <Button 
           variant="ghost" 
           onClick={() => navigate("/")}
-          className="mb-4 text-[#8E9196] hover:text-[#1A1F2C] hover:bg-[#F1F0FB]"
+          className="mb-4 text-[#d1a6bb] hover:text-[#ff5cad] hover:bg-[#231327]"
         >
           <ArrowLeft />
           Назад
         </Button>
 
-        <div className="bg-white rounded-xl shadow-lg p-6">
-          <h1 className="text-2xl font-bold text-[#1A1F2C] mb-6">Создание нового сценария</h1>
+        <div className="bg-[#231327] rounded-xl shadow-lg shadow-[#ff5cad]/20 p-6 border border-[#ff5cad]/30">
+          <h1 className="text-2xl font-bold text-[#ff5cad] mb-6">Создание нового сценария</h1>
           
           {error && (
-            <div className="bg-[#FFDEE2] p-3 rounded mb-4 text-[#ea384c]">
+            <div className="bg-[#3a0f1e] p-3 rounded mb-4 text-[#ff5cad] border border-[#ff5cad]/50">
               {error}
             </div>
           )}
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-[#8E9196] mb-1">
+              <label className="block text-sm font-medium text-[#d1a6bb] mb-1">
                 Шифр-слово
               </label>
               <Input
                 value={codeword}
                 onChange={(e) => setCodeword(e.target.value)}
                 placeholder="Введите секретное шифр-слово"
-                className="border-[#D6BCFA] focus-visible:ring-[#9b87f5]"
+                className="border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30]"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#8E9196] mb-1">
+              <label className="block text-sm font-medium text-[#d1a6bb] mb-1">
                 Результат
               </label>
               <Textarea
                 value={result}
                 onChange={(e) => setResult(e.target.value)}
                 placeholder="Что должно отобразиться при вводе шифр-слова"
-                className="min-h-[120px] border-[#D6BCFA] focus-visible:ring-[#9b87f5]"
+                className="min-h-[120px] border-[#ff5cad] focus-visible:ring-[#ff5cad] bg-[#2c1a30]"
               />
             </div>
 
             <Button 
               onClick={saveScenario} 
-              className="w-full bg-[#9b87f5] hover:bg-[#7E69AB]"
+              className="w-full bg-[#ff5cad] hover:bg-[#ff3896] text-black font-semibold"
             >
-              <Save />
+              <Save className="mr-2" />
               Сохранить сценарий
             </Button>
           </div>
