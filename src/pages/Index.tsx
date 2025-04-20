@@ -53,7 +53,7 @@ const Index = () => {
       <div className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-lg text-center mb-8">
           <h1 className="text-4xl font-bold text-[#ff5cad] mb-4 neon-text flicker">Шифр-слова</h1>
-          <p className="text-[#d1a6bb] text-lg">Введите шифр-слово для проверки</p>
+          <p className="text-[#d1a6bb] text-lg">Введите шифр-слово чтобы узнать подсказку</p>
         </div>
 
         <div className="bg-[#231327] rounded-xl p-8 w-full max-w-lg border border-[#ff5cad]/30 neon-box">
